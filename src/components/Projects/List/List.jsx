@@ -1,8 +1,8 @@
-export default function Lists({ listElements, listData }) {
+export default function List({ listElements, listStyle }) {
 	return (
-		<ul className="mt-3 text-cod-gray-100 text-md ">
+		<ul className="mt-3 text-abbey-700 ">
 			{listElements.map((listElement, index) => (
-				<li key={index} className={listData}>
+				<li key={index} className={listStyle}>
 					{listElement}
 				</li>
 			))}
