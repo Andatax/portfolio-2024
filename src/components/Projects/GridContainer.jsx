@@ -1,4 +1,6 @@
-import List from "./List";
+import List from "./List/List";
+import listData from "./List/listStyle";
+
 export default function GridContainer({
 	bgColor,
 	widthProject,
@@ -8,17 +10,19 @@ export default function GridContainer({
 	columnProperties,
 	flexItem,
 	skillsBody,
+	languagesBody,
 }) {
 	const gridCell = `${columnProperties} w-full flex ${flexItem} `;
-	const containerClasses = `flex ${flexItem} ${columnProperties} ${bgColor} ${widthProject} ${heightProject} rounded-md`;
+	const containerClasses = `${flexItem} ${columnProperties} ${bgColor} ${widthProject} ${heightProject} rounded-md`;
 
 	return (
 		<div className={gridCell}>
 			<div className={containerClasses}>
 				<p className={textPropeties}>
 					<span>{containerText}</span>
-					{skillsBody && <List listElements={skillsBody} />}
 				</p>
+				{skillsBody && <List listElements={skillsBody} listStyle={listData} />}
+				{languagesBody && <List listElements={languagesBody} listStyle={listData} />}
 			</div>
 		</div>
 	);
