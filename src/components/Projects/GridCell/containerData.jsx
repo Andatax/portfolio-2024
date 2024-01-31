@@ -94,6 +94,8 @@ const gridData = [
 			"ORM",
 			"Mongoose",
 			"Sequelize",
+			"Node.js",
+			"GSAP",
 		],
 		idTag: "Skills",
 		link: "",
