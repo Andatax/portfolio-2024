@@ -67,7 +67,7 @@ export default function GridContainer({
 	const handleMouseEnter = () => {
 		gsap.to(`#${listId} li`, { xPercent: 0, opacity: 1, duration: 1, stagger: 0.1 });
 	};
-	const gridCell = `${columnProperties} w-full flex ${flexItem} `;
+	const gridCell = `${columnProperties} w-full lg:flex ${flexItem} `;
 	const containerClasses = `${flexItem} ${columnProperties} ${bgColor} ${widthProject} ${heightProject} rounded-md`;
 
 	return (

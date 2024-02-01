@@ -24,7 +24,7 @@ export default function Nav() {
 	return (
 		<nav className="w-full p-5" ref={comp}>
 			<NavName firstName="Abraham" lastName="Mendez" />
-			<ul className="space-y-2 text-abbey-700 text-md flex items-center justify-between">
+			<ul className="space-y-2 text-abbey-700 lg:text-md md:text-xs md:flex-column lg:flex items-center justify-between">
 				<NavBtn btnText="GitHub" btnId="github" btnLink="https://github.com/Andatax" />
 				<NavBtn
 					btnText="LinkedIn"

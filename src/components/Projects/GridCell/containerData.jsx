@@ -93,11 +93,11 @@ const gridData = [
 	{
 		widthProject: "w-2/3",
 		heightProject: "h-auto p-5",
-		columnProperties: "col-span-2 justify-center h-72",
+		columnProperties: "col-span-2 justify-center lg:h-72 sm:h-auto sm:col-span-3",
 		textPropeties: "lg:text-lg sm:text-sm text-abbey-700 text-start",
 		containerText:
 			"I'm a Full-Stack developer with a background in art, design and game development. I excel in crafting mobile-first applications with smooth designs and intuitive usability. I'm passionate about problem-solving and debugging, and I pride myself on delivering exceptional results.",
-		flexItem: "flex items-start",
+		flexItem: "lg:flex sm:flex items-start ",
 		idTag: "AboutMeBody",
 		link: "",
 		arefclass: "pointer-events-none",
@@ -108,7 +108,7 @@ const gridData = [
 		heightProject: "h-full p-5",
 		containerText: "Skills",
 		textPropeties: "lg:text-3xl md:text-xl text-abbey-700  text-center",
-		columnProperties: " h-full justify-end row-span-2",
+		columnProperties: " h-full justify-start row-span-2",
 		flexItem: "flex-wrap items-start",
 		arefclass: "pointer-events-none",
 		listStyles: "text-abbey-700 text-md sm:text-sm opacity-0",
@@ -140,6 +140,10 @@ const gridData = [
 		link: "",
 		listId: "SkillsList",
 	},
+	{ isEmpty: true },
+	{ isEmpty: true },
+	{ isEmpty: true },
+
 	{
 		bgColor: "bg-valencia-600",
 		widthProject: "w-2/3",
