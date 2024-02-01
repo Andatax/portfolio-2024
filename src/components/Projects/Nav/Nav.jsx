@@ -24,7 +24,7 @@ export default function Nav() {
 	return (
 		<nav className="w-full p-5" ref={comp}>
 			<NavName firstName="Abraham" lastName="Mendez" />
-			<ul className="space-y-2 text-abbey-700 text-sm flex items-center justify-between">
+			<ul className="space-y-2 text-abbey-700 text-md flex items-center justify-between">
 				<NavBtn btnText="GitHub" btnId="github" btnLink="https://github.com/Andatax" />
 				<NavBtn
 					btnText="LinkedIn"
@@ -36,11 +36,7 @@ export default function Nav() {
 					btnId="instagram"
 					btnLink="https://www.instagram.com/onemoretiffplease/?igsh=MTJpbGQwczlqMjQ3eg%3D%3D"
 				/>
-				<NavBtn
-					btnText="Email"
-					btnId="email"
-					btnLink="https://www.instagram.com/onemoretiffplease/?igsh=MTJpbGQwczlqMjQ3eg%3D%3Dmailto:abraham.mendez1011@gmail.com"
-				/>
+				<NavBtn btnText="Email" btnId="email" btnLink="mailto:abraham.mendez1011@gmail.com" />
 			</ul>
 		</nav>
 	);
