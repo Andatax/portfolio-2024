@@ -5,7 +5,7 @@ export default function Footer() {
 	};
 	return (
 		<footer>
-			<button onClick={scrollToTop} className="text-abbey-700 text-md pl-5 pb-5">
+			<button onClick={scrollToTop} className="text-abbey-700 text-sm pl-5 pb-5">
 				Back to top
 			</button>
 		</footer>
