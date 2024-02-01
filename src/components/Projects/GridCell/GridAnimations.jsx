@@ -9,18 +9,23 @@ export const useGSAPAnimations = (trigger, selector, splitType, options) => {
 	useGSAP(
 		() => {
 			const splitText = new SplitType(selector, { type: splitType });
-			gsap.from(splitText[splitType], {
-				scrollTrigger: {
+
+			const animationSettings = {
+				yPercent: 40,
+				duration: options.duration || 1.2,
+				opacity: options.opacity || 0,
+				stagger: options.stagger || 0.5,
+			};
+
+			if (options.scrollTrigger) {
+				animationSettings.scrollTrigger = {
 					trigger,
 					toggleActions: "restart pause resume restart",
 					...options.scrollTrigger,
-				},
-				yPercent: 40,
-				duration: options.duration || 1.2,
-				delay: options.delay || 0.2,
-				opacity: options.opacity || 0,
-				stagger: options.stagger || 0.5,
-			});
+				};
+			}
+
+			gsap.from(splitText[splitType], animationSettings);
 		},
 		{ scope: comp, revertOnUpdate: true }
 	);

@@ -38,6 +38,7 @@ const gridData = [
 		],
 		listStyles: "text-cod-gray-100 text-md sm:text-xs  opacity-0",
 		listId: "TodoneList",
+		target: "_blank",
 	},
 	{ isEmpty: true },
 	{ isEmpty: true },
@@ -68,6 +69,7 @@ const gridData = [
 			"Cloud Service Heroku",
 		],
 		listId: "MVCList",
+		target: "_blank",
 	},
 
 	{
@@ -83,6 +85,7 @@ const gridData = [
 		listStyles: "text-abbey-700 text-md sm:text-xs opacity-0",
 		listbody: ["Javascript", "Node.js", "ORM Mongoose", "MongoDb", "Express.js", "Insomnia"],
 		listId: "MongoList",
+		target: "_blank",
 	},
 	{ isEmpty: true },
 	{ isEmpty: true },
@@ -107,6 +110,7 @@ const gridData = [
 		textPropeties: "lg:text-3xl md:text-xl text-abbey-700  text-center",
 		columnProperties: " h-full justify-end row-span-2",
 		flexItem: "flex-wrap items-start",
+		arefclass: "pointer-events-none",
 		listStyles: "text-abbey-700 text-md sm:text-xs opacity-0",
 		listbody: [
 			"MERN Stack",

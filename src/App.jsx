@@ -2,6 +2,7 @@ import { useState } from "react";
 import Nav from "./components/Projects/Nav/Nav";
 import "./index.css";
 import Gallery from "./components/Gallery";
+import Footer from "./components/Footer/Footer";
 
 function App() {
 	return (
@@ -12,6 +13,7 @@ function App() {
 					<div className="pb-1">
 						<Gallery />
 					</div>
+					<Footer />
 				</div>
 			</main>
 		</>
