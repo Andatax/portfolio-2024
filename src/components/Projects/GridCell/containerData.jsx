@@ -36,7 +36,8 @@ const gridData = [
 			"Express.js",
 			"MySQL",
 		],
-		listStyles: "text-cod-gray-100 text-md sm:text-xs opacity-0 hidden",
+		listStyles: "text-cod-gray-100 text-md sm:text-xs  opacity-0",
+		listId: "TodoneList",
 	},
 	{ isEmpty: true },
 	{ isEmpty: true },
@@ -52,7 +53,7 @@ const gridData = [
 		idTag: "MVCBtn",
 		link: `https://mvc-blog-tailwind-95c92be2d918.herokuapp.com/login`,
 		containerId: "MVCContainer",
-		listStyles: "text-cod-gray-100 text-md sm:text-xs opacity-0 hidden ",
+		listStyles: "text-cod-gray-100 text-md sm:text-xs opacity-0",
 		listbody: [
 			"Javascript",
 			"Node.js",
@@ -66,6 +67,7 @@ const gridData = [
 			"Mysql",
 			"Cloud Service Heroku",
 		],
+		listId: "MVCList",
 	},
 
 	{
@@ -78,8 +80,9 @@ const gridData = [
 		flexItem: "flex-wrap items-end",
 		idTag: "MongoBtn",
 		link: `https://github.com/Andatax/social-network-mdb`,
-		listStyles: "text-abbey-700 text-md sm:text-xs opacity-0 hidden",
+		listStyles: "text-abbey-700 text-md sm:text-xs opacity-0",
 		listbody: ["Javascript", "Node.js", "ORM Mongoose", "MongoDb", "Express.js", "Insomnia"],
+		listId: "MongoList",
 	},
 	{ isEmpty: true },
 	{ isEmpty: true },
@@ -104,7 +107,7 @@ const gridData = [
 		textPropeties: "lg:text-3xl md:text-xl text-abbey-700  text-center",
 		columnProperties: " h-full justify-end row-span-2",
 		flexItem: "flex-wrap items-start",
-		listStyles: "text-abbey-700 text-md sm:text-xs",
+		listStyles: "text-abbey-700 text-md sm:text-xs opacity-0",
 		listbody: [
 			"MERN Stack",
 			"Webpack",
@@ -131,6 +134,7 @@ const gridData = [
 		],
 		idTag: "Skills",
 		link: "",
+		listId: "SkillsList",
 	},
 	{
 		bgColor: "bg-valencia-600",
