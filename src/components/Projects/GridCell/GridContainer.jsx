@@ -22,6 +22,7 @@ export default function GridContainer({
 	arefclass,
 	listId,
 	target,
+	scroll,
 }) {
 	gsap.registerPlugin(ScrollTrigger);
 	const comp = useRef();
@@ -67,13 +68,22 @@ export default function GridContainer({
 	const handleMouseEnter = () => {
 		gsap.to(`#${listId} li`, { xPercent: 0, opacity: 1, duration: 1, stagger: 0.1 });
 	};
-	const gridCell = `${columnProperties} w-full lg:flex ${flexItem} `;
+	const gridCell = `${columnProperties} w-full lg:flex  `;
 	const containerClasses = `${flexItem} ${columnProperties} ${bgColor} ${widthProject} ${heightProject} rounded-md`;
-
+	const aboutMeBodySelector = document.getElementById("AboutMeBody"); // Remove the # symbol
 	return (
 		<div ref={comp} className={gridCell}>
 			<div id={containerId} onMouseEnter={handleMouseEnter} className={containerClasses}>
-				<a className={arefclass} href={link} target={target || undefined}>
+				<a
+					className={arefclass}
+					onClick={
+						scroll && aboutMeBodySelector
+							? () => aboutMeBodySelector.scrollIntoView({ behavior: "smooth" })
+							: null
+					}
+					href={link ? link : undefined}
+					target={target || undefined}
+				>
 					<p id={idTag} className={textPropeties}>
 						<span>{containerText}</span>
 					</p>
