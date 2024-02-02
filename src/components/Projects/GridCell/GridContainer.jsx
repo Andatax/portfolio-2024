@@ -19,7 +19,6 @@ export default function GridContainer({
 	link,
 	idTag,
 	containerId,
-	arefclass,
 	listId,
 	target,
 	scroll,
@@ -52,23 +51,24 @@ export default function GridContainer({
 
 	return (
 		<div ref={comp} className={gridCell}>
-			<div id={containerId} onMouseEnter={handleMouseEnter} className={containerClasses}>
-				<a
-					className={arefclass}
-					onClick={
-						scroll && aboutMeBodySelector
-							? () => aboutMeBodySelector.scrollIntoView({ behavior: "smooth", block: "center" })
-							: null
-					}
-					href={link ? link : undefined}
-					target={target || undefined}
-				>
-					<p id={idTag} className={textPropeties}>
-						<span>{containerText}</span>
-					</p>
-				</a>
+			<a
+				id={containerId}
+				onMouseEnter={handleMouseEnter}
+				className={containerClasses}
+				onClick={
+					scroll && aboutMeBodySelector
+						? () => aboutMeBodySelector.scrollIntoView({ behavior: "smooth", block: "center" })
+						: null
+				}
+				href={link ? link : undefined}
+				target={target || undefined}
+			>
+				<p id={idTag} className={textPropeties}>
+					<span>{containerText}</span>
+				</p>
+
 				{listbody && <List listId={listId} listElements={listbody} listStyle={listStyles} />}
-			</div>
+			</a>
 		</div>
 	);
 }

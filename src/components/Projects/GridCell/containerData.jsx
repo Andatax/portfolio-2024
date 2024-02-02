@@ -5,12 +5,11 @@ const gridData = [
 		heightProject: "h-24 p-3",
 		containerText: "About Me",
 		textPropeties: "text-5xl text-cod-gray-100",
-		columnProperties: "h-52",
+		columnProperties: "h-52 cursor-pointer",
 		flexItem: "flex items-end",
 		idTag: "AboutMeBtn",
 		containerId: "AboutMeContainer",
 		scroll: true,
-		arefclass: "cursor-pointer",
 	},
 	{ isEmpty: true },
 	{ isEmpty: true },
@@ -94,14 +93,14 @@ const gridData = [
 	{
 		widthProject: "w-2/3",
 		heightProject: "h-auto p-5",
-		columnProperties: "col-span-2 justify-center lg:h-72 sm:h-auto sm:col-span-3 sm:flex items-start ",
+		columnProperties:
+			"col-span-2 justify-center lg:h-72 sm:h-auto sm:col-span-3 sm:flex items-start pointer-events-none",
 		textPropeties: "lg:text-lg sm:text-sm text-abbey-700 text-start",
 		containerText:
 			"I'm a Full-Stack developer with a background in art, design and game development. I excel in crafting mobile-first applications with smooth designs and intuitive usability. I'm passionate about problem-solving and debugging, and I pride myself on delivering exceptional results.",
 		flexItem: "lg:flex sm:flex items-start ",
 		idTag: "AboutMeBody",
 		link: "",
-		arefclass: "pointer-events-none",
 	},
 	{
 		bgColor: "bg-tulip-tree-300 hover:bg-tulip-tree-400",
@@ -111,7 +110,6 @@ const gridData = [
 		textPropeties: "lg:text-3xl sm:text-sm text-abbey-700  text-center",
 		columnProperties: " h-full justify-start row-span-2 items-start",
 		flexItem: "flex-wrap items-start",
-		arefclass: "pointer-events-none",
 		listStyles: "text-abbey-700 text-md sm:text-sm opacity-0",
 		listbody: [
 			"MERN Stack",

@@ -27,7 +27,7 @@ export const mendezContext = compRef => {
 export const socialMediaContext = compRef => {
 	return gsap.context(() => {
 		const timeline = gsap.timeline({});
-		timeline.from(["#github", "#linkedin", "#email", "#instagram"], {
+		timeline.from(["#github", "#linkedin", "#email", "#instagram", "#cv"], {
 			duration: 1,
 			delay: 0.7,
 			opacity: 0,
