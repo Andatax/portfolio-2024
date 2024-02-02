@@ -57,7 +57,7 @@ export default function GridContainer({
 					className={arefclass}
 					onClick={
 						scroll && aboutMeBodySelector
-							? () => aboutMeBodySelector.scrollIntoView({ behavior: "smooth" })
+							? () => aboutMeBodySelector.scrollIntoView({ behavior: "smooth", block: "center" })
 							: null
 					}
 					href={link ? link : undefined}
