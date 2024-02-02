@@ -4,7 +4,7 @@ import gsap from "gsap";
 import SplitType from "split-type";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useGSAPAnimations } from "./GridAnimations";
+import { useGSAPAnimations, animations } from "./GridAnimations";
 
 export default function GridContainer({
 	bgColor,
@@ -27,31 +27,12 @@ export default function GridContainer({
 	gsap.registerPlugin(ScrollTrigger);
 	const comp = useRef();
 	const containerRef = useRef();
+	const gridCell = `${columnProperties} w-full lg:flex  `;
+	const containerClasses = `${flexItem} ${columnProperties} ${bgColor} ${widthProject} ${heightProject} rounded-md`;
+	const aboutMeBodySelector = document.getElementById("AboutMeBody");
 
-	useGSAPAnimations("#AboutMeBtn", "#AboutMeBtn", "chars", {
-		stagger: 0.2,
-		scrollTrigger: null,
-		delay: 0.9,
-	});
-	useGSAPAnimations("#TodoneBtn", "#TodoneBtn", "words", {
-		stagger: 0.5,
-		scrollTrigger: null,
-		delay: 0.9,
-	});
-	useGSAPAnimations("#MVCBtn", "#MVCBtn", "words", {
-		stagger: 0.5,
-		delay: 0.9,
-		scrollTrigger: "#MVCBtn",
-	});
-	useGSAPAnimations("#MongoBtn", "#MongoBtn", "words", {
-		stagger: 0.5,
-		delay: 1.1,
-		scrollTrigger: "#MongoBtn",
-	});
-	useGSAPAnimations("#AboutMeBody", "#AboutMeBody", "words", {
-		stagger: 0.1,
-		toggleActions: "restart pause resume none",
-		scrollTrigger: "#AboutMeBody",
+	animations.forEach(({ id, type, ...options }) => {
+		useGSAPAnimations(id, id, type, options);
 	});
 	useGSAP(() => {
 		const listElements = document.querySelectorAll(`#${listId} li`);
@@ -68,9 +49,7 @@ export default function GridContainer({
 	const handleMouseEnter = () => {
 		gsap.to(`#${listId} li`, { xPercent: 0, opacity: 1, duration: 1, stagger: 0.1 });
 	};
-	const gridCell = `${columnProperties} w-full lg:flex  `;
-	const containerClasses = `${flexItem} ${columnProperties} ${bgColor} ${widthProject} ${heightProject} rounded-md`;
-	const aboutMeBodySelector = document.getElementById("AboutMeBody"); // Remove the # symbol
+
 	return (
 		<div ref={comp} className={gridCell}>
 			<div id={containerId} onMouseEnter={handleMouseEnter} className={containerClasses}>
