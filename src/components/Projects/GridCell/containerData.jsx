@@ -1,6 +1,6 @@
 const gridData = [
 	{
-		bgColor: "bg-tulip-tree-400 hover:bg-tulip-tree-500",
+		bgColor: "bg-tulip-tree-300 hover:bg-tulip-tree-400",
 		widthProject: "lg:w-44 sm:w-auto",
 		heightProject: "h-24 p-3",
 		containerText: "About Me",
@@ -138,7 +138,6 @@ const gridData = [
 			"GSAP",
 		],
 		idTag: "Skills",
-		link: "",
 		listId: "SkillsList",
 	},
 	{ isEmpty: true },
@@ -155,7 +154,6 @@ const gridData = [
 		flexItem: "flex items-end",
 		listStyles: "text-cod-gray-100 lg:text-3xl sm:text-sm",
 		idTag: "Languages",
-		link: "",
 	},
 ];
 
