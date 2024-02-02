@@ -1,6 +1,6 @@
 export default function NavName({ firstName, lastName }) {
 	return (
-		<h1 className="lg:text-9xl sm:text-4xl w-full font-bold mb-2 flex justify-center border-b-2 border-abbey-700">
+		<h1 className="lg:text-9xl md:text-2xl sm:text-xl w-full font-bold mb-2 flex justify-center border-b-2 border-abbey-700">
 			<span id={firstName} className="text-abbey-700 mr-20 mb-2">
 				{firstName}
 			</span>
