@@ -70,6 +70,9 @@ export default {
 				950: "#421706",
 			},
 		},
+		screens: {
+			lg: "1025px",
+		},
 		extend: {
 			width: {
 				"23/24": "98.8333333333%",
