@@ -26,7 +26,7 @@ export default function GridContainer({
 	gsap.registerPlugin(ScrollTrigger);
 	const comp = useRef();
 	const containerRef = useRef();
-	const gridCell = `${columnProperties} w-full lg:flex  `;
+	const gridCell = `${columnProperties} w-full flex  `;
 	const containerClasses = `${flexItem} ${columnProperties} ${bgColor} ${widthProject} ${heightProject} rounded-md`;
 	const aboutMeBodySelector = document.getElementById("AboutMeBody");
 
