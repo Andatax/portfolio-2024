@@ -28,7 +28,7 @@ To install the project, follow these steps:
 
 ## Screen Shots
 
-- [Portfolio](./src/assets/imgs/readmeSS.png)
+- ![Portfolio](./src/assets/imgs/readmeSS.png)
 
 ## License
 
