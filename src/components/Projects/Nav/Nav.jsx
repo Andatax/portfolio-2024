@@ -25,11 +25,11 @@ export default function Nav() {
 		<nav className="w-full p-5" ref={comp}>
 			<NavName firstName="Abraham" lastName="Mendez" />
 			<ul className="space-y-2 text-abbey-700 lg:text-md md:text-xs md:flex-column lg:flex items-center justify-between">
-				<NavBtn
+				{/* <NavBtn
 					btnText="Instagram"
 					btnId="instagram"
 					btnLink="https://www.instagram.com/onemoretiffplease/?igsh=MTJpbGQwczlqMjQ3eg%3D%3D"
-				/>
+				/> */}
 				<NavBtn btnText="GitHub" btnId="github" btnLink="https://github.com/Andatax" />
 				<NavBtn
 					btnText="LinkedIn"
@@ -39,7 +39,7 @@ export default function Nav() {
 				<NavBtn
 					btnText="CV"
 					btnId="cv"
-					btnLink="../../../assets/CV_AbrahamMendez2024.pdf"
+					btnLink="/CV_AbrahamMendez2024.pdf"
 					download="CV_AbrahamMendez2024.pdf"
 				/>
 				<NavBtn btnText="Email" btnId="email" btnLink="mailto:abraham.mendez1011@gmail.com" />
