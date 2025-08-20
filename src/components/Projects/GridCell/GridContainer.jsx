@@ -1,10 +1,10 @@
 import List from "../List/List";
-import { useRef, useState, useEffect, useLayoutEffect } from "react";
+import { useRef } from "react";
 import gsap from "gsap";
 import SplitType from "split-type";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useGSAPAnimations, animations } from "./GridAnimations";
+import { animations } from "./GridAnimations";
 
 export default function GridContainer({
 	bgColor,
@@ -25,14 +25,33 @@ export default function GridContainer({
 }) {
 	gsap.registerPlugin(ScrollTrigger);
 	const comp = useRef();
-	const containerRef = useRef();
 	const gridCell = `${columnProperties} w-full flex  `;
 	const containerClasses = `${flexItem} ${columnProperties} ${bgColor} ${widthProject} ${heightProject} rounded-md`;
 	const aboutMeBodySelector = document.getElementById("AboutMeBody");
 
-	animations.forEach(({ id, type, ...options }) => {
-		useGSAPAnimations(id, id, type, options);
-	});
+	useGSAP(() => {
+		animations.forEach(({ id, type, ...options }) => {
+			const splitText = new SplitType(id, { type });
+			
+			const animationSettings = {
+				yPercent: 40,
+				duration: options.duration || 1.2,
+				opacity: options.opacity || 0,
+				stagger: options.stagger || 0.5,
+			};
+
+			if (options.scrollTrigger) {
+				animationSettings.scrollTrigger = {
+					trigger: id,
+					toggleActions: "restart pause resume restart",
+					...options.scrollTrigger,
+				};
+			}
+
+			gsap.from(splitText[type], animationSettings);
+		});
+	}, []);
+	
 	useGSAP(() => {
 		const listElements = document.querySelectorAll(`#${listId} li`);
 
