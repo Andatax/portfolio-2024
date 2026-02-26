@@ -39,8 +39,8 @@ export default function Nav() {
 				<NavBtn
 					btnText="CV"
 					btnId="cv"
-					btnLink="/CV_AbrahamMendez2025.pdf"
-					download="CV_AbrahamMendez2025.pdf"
+					btnLink="/AbrahamMendez_Resume2026.pdf"
+					download="AbrahamMendez_Resume2026.pdf"
 				/>
 				<NavBtn btnText="Email" btnId="email" btnLink="mailto:abraham.mendez1011@gmail.com" />
 			</ul>
