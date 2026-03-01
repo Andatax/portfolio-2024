@@ -7,8 +7,8 @@ import BackgroundLines from "./components/BackgroundLines";
 function App() {
 	return (
 		<>
-			<main className="relative h-screen p-2">
-				<div className="bg-cod-gray-50 w-full h-auto rounded-md flex-col relative">
+			<main className="relative min-h-screen p-1 md:p-2">
+				<div className="bg-cod-gray-50 w-full h-auto rounded-none md:rounded-md flex-col relative">
 					<BackgroundLines />
 					<div className="relative z-10">
 						<Nav />

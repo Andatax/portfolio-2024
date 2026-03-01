@@ -27,12 +27,11 @@ export default function GridContainer({
 	const comp = useRef();
 	const gridCell = `${columnProperties} w-full flex  `;
 	const containerClasses = `${flexItem} ${columnProperties} ${bgColor} ${widthProject} ${heightProject} rounded-md`;
-	const aboutMeBodySelector = document.getElementById("AboutMeBody");
 
 	useGSAP(() => {
 		animations.forEach(({ id, type, ...options }) => {
 			const splitText = new SplitType(id, { type });
-			
+
 			const animationSettings = {
 				yPercent: 40,
 				duration: options.duration || 1.2,
@@ -51,7 +50,7 @@ export default function GridContainer({
 			gsap.from(splitText[type], animationSettings);
 		});
 	}, []);
-	
+
 	useGSAP(() => {
 		const listElements = document.querySelectorAll(`#${listId} li`);
 
@@ -64,6 +63,7 @@ export default function GridContainer({
 			});
 		}
 	}, [listId]);
+
 	const handleMouseEnter = () => {
 		gsap.to(`#${listId} li`, { xPercent: 0, opacity: 1, duration: 1, stagger: 0.1 });
 	};
@@ -75,8 +75,11 @@ export default function GridContainer({
 				onMouseEnter={handleMouseEnter}
 				className={containerClasses}
 				onClick={
-					scroll && aboutMeBodySelector
-						? () => aboutMeBodySelector.scrollIntoView({ behavior: "smooth", block: "center" })
+					scroll
+						? () => {
+								const el = document.getElementById("AboutMeBody");
+								if (el) el.scrollIntoView({ behavior: "smooth", block: "center" });
+						  }
 						: null
 				}
 				href={link ? link : undefined}
