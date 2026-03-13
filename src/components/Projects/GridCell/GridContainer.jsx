@@ -1,7 +1,8 @@
 import List from "../List/List";
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import gsap from "gsap";
 import SplitType from "split-type";
+const isTouchDevice = () => window.matchMedia("(hover: none)").matches;
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { animations } from "./GridAnimations";
@@ -51,37 +52,49 @@ export default function GridContainer({
 		});
 	}, []);
 
-	useGSAP(() => {
-		const listElements = document.querySelectorAll(`#${listId} li`);
+	const isRevealed = useRef(false);
 
-		if (listElements.length > 0) {
-			gsap.from(listElements, {
-				opacity: 0,
-				y: -100,
-				duration: 0.5,
-				ease: "power2.out",
-			});
-		}
+	const revealList = () => {
+		gsap.to(`#${listId} li`, { xPercent: 0, opacity: 1, duration: 1, stagger: 0.1 });
+		isRevealed.current = true;
+	};
+
+	useEffect(() => {
+		if (!listId || !isTouchDevice()) return;
+		const trigger = comp.current;
+		if (!trigger) return;
+		const observer = new IntersectionObserver(
+			([entry]) => {
+				if (entry.isIntersecting && !isRevealed.current) {
+					revealList();
+					observer.disconnect();
+				}
+			},
+			{ threshold: 0.3 }
+		);
+		observer.observe(trigger);
+		return () => observer.disconnect();
 	}, [listId]);
 
-	const handleMouseEnter = () => {
-		gsap.to(`#${listId} li`, { xPercent: 0, opacity: 1, duration: 1, stagger: 0.1 });
+	const handleClick = (e) => {
+		if (scroll) {
+			const el = document.getElementById("AboutMeBody");
+			if (el) el.scrollIntoView({ behavior: "smooth", block: "center" });
+			return;
+		}
+		if (isTouchDevice() && !isRevealed.current) {
+			e.preventDefault();
+			revealList();
+		}
 	};
 
 	return (
 		<div ref={comp} className={gridCell}>
 			<a
 				id={containerId}
-				onMouseEnter={handleMouseEnter}
+				onMouseEnter={revealList}
 				className={containerClasses}
-				onClick={
-					scroll
-						? () => {
-								const el = document.getElementById("AboutMeBody");
-								if (el) el.scrollIntoView({ behavior: "smooth", block: "center" });
-						  }
-						: null
-				}
+				onClick={handleClick}
 				href={link ? link : undefined}
 				target={target || undefined}
 			>

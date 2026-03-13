@@ -22,7 +22,7 @@ const gridData = [
 		textPropeties: "text-3xl md:text-5xl text-cod-gray-100",
 		columnProperties: "col-span-1 md:col-span-2 h-auto md:h-72 justify-end md:justify-start",
 		flexItem: "flex-wrap items-end",
-		idTag: "TodoneBtn",
+		idTag: "CapiiiBtn",
 		link: `https://capiii-vu6n.onrender.com/`,
 		containerId: "TodoneContainer",
 		listbody: [
@@ -93,8 +93,7 @@ const gridData = [
 	{
 		widthProject: "w-full",
 		heightProject: "h-auto p-5",
-		columnProperties:
-			"md:col-span-3 justify-center h-auto md:h-72 flex items-start pointer-events-none",
+		columnProperties: "md:col-span-3 justify-center h-auto md:h-72 flex items-start pointer-events-none",
 		textPropeties: "text-sm lg:text-lg text-abbey-700 text-start",
 		containerText:
 			"I'm a Full-Stack developer with a background in art, design and game development. I excel in crafting mobile-first applications with smooth designs and intuitive usability. I'm passionate about problem-solving and debugging, and I pride myself on delivering exceptional results.",

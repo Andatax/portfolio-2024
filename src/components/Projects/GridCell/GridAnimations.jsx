@@ -27,12 +27,12 @@ export const useGSAPAnimations = (trigger, selector, splitType, options) => {
 
 			gsap.from(splitText[splitType], animationSettings);
 		},
-		{ scope: comp, revertOnUpdate: true }
+		{ scope: comp, revertOnUpdate: true },
 	);
 };
 export const animations = [
 	{ id: "#AboutMeBtn", type: "chars", stagger: 0.2, scrollTrigger: null, delay: 0.9 },
-	{ id: "#TodoneBtn", type: "words", stagger: 0.5, scrollTrigger: null, delay: 0.9 },
+	{ id: "#CapiiiBtn", type: "words", stagger: 0.5, delay: 0.9, scrollTrigger: "#CapiiiBtn" },
 	{ id: "#MVCBtn", type: "words", stagger: 0.5, delay: 0.9, scrollTrigger: "#MVCBtn" },
 	{ id: "#MongoBtn", type: "words", stagger: 0.5, delay: 1.1, scrollTrigger: "#MongoBtn" },
 	{
