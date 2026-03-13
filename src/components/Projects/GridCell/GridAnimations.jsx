@@ -32,6 +32,7 @@ export const useGSAPAnimations = (trigger, selector, splitType, options) => {
 };
 export const animations = [
 	{ id: "#AboutMeBtn", type: "chars", stagger: 0.2, scrollTrigger: null, delay: 0.9 },
+	{ id: "#PortfolioBtn", type: "words", stagger: 0.5, delay: 0.9, scrollTrigger: "#PortfolioBtn" },
 	{ id: "#CapiiiBtn", type: "words", stagger: 0.5, delay: 0.9, scrollTrigger: "#CapiiiBtn" },
 	{ id: "#MVCBtn", type: "words", stagger: 0.5, delay: 0.9, scrollTrigger: "#MVCBtn" },
 	{ id: "#MongoBtn", type: "words", stagger: 0.5, delay: 1.1, scrollTrigger: "#MongoBtn" },
