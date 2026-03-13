@@ -25,11 +25,7 @@ export default function Nav() {
 		<nav className="w-full p-5" ref={comp}>
 			<NavName firstName="Abraham" lastName="Mendez" />
 			<ul className="text-abbey-700 text-xs sm:text-sm lg:text-base flex flex-row items-center justify-between">
-				{/* <NavBtn
-					btnText="Instagram"
-					btnId="instagram"
-					btnLink="https://www.instagram.com/onemoretiffplease/?igsh=MTJpbGQwczlqMjQ3eg%3D%3D"
-				/> */}
+				<NavBtn btnText="General Portfolio" btnId="Portfolio" btnLink="https://amendezstudio.com" />
 				<NavBtn btnText="GitHub" btnId="github" btnLink="https://github.com/Andatax" />
 				<NavBtn
 					btnText="LinkedIn"
@@ -37,10 +33,10 @@ export default function Nav() {
 					btnLink="https://www.linkedin.com/in/abraham-mendez-b0885b177"
 				/>
 				<NavBtn
-					btnText="CV"
-					btnId="cv"
-					btnLink="/AbrahamMendez_Resume2026v1.pdf"
-					download="AbrahamMendez_Resume2026v1.pdf"
+					btnText="Resume"
+					btnId="resume"
+					btnLink="https://images.amendezstudio.com/AbrahamMendez_Resume2026.pdf"
+					download="AbrahamMendez_Resume2026.pdf"
 				/>
 				<NavBtn btnText="Email" btnId="email" btnLink="mailto:abraham.mendez1011@gmail.com" />
 			</ul>

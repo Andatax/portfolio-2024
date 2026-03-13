@@ -3,6 +3,10 @@ import "./index.css";
 import Gallery from "./components/Gallery";
 import Footer from "./components/Footer/Footer";
 import BackgroundLines from "./components/BackgroundLines";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
+ScrollTrigger.normalizeScroll(true);
 
 function App() {
 	return (
